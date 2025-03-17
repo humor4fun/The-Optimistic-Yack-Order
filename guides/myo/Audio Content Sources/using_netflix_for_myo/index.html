@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://yackorder.org/guides/myo/Audio%20Content%20Sources/using_libby_to_get_mp3/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://yackorder.org/guides/myo/Audio%20Content%20Sources/using_netflix_for_myo/" />
       <link rel="shortcut icon" href="../../../../img/favicon.ico" />
-    <title>Libby MP3s - The Optimistic Yack Order</title>
+    <title>Netflix Audio for MYO - The Optimistic Yack Order</title>
     <link rel="stylesheet" href="../../../../css/theme.css" />
     <link rel="stylesheet" href="../../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Libby MP3s";
-        var mkdocs_page_input_path = "guides\\myo\\Audio Content Sources\\using_libby_to_get_mp3.md";
-        var mkdocs_page_url = "/guides/myo/Audio%20Content%20Sources/using_libby_to_get_mp3/";
+        var mkdocs_page_name = "Netflix Audio for MYO";
+        var mkdocs_page_input_path = "guides\\myo\\Audio Content Sources\\using_netflix_for_myo.md";
+        var mkdocs_page_url = "/guides/myo/Audio%20Content%20Sources/using_netflix_for_myo/";
       </script>
     
     <!--[if lt IE 9]>
@@ -131,15 +131,13 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../aquiring_audio_tools/">Tools to Acquire Audio</a>
                 </li>
-                <li class="toctree-l3 current"><a class="reference internal current" href="#">Libby MP3s</a>
-    <ul class="current">
-    <li class="toctree-l4"><a class="reference internal" href="#additional-steps-for-multi-part-books-on-libby">Additional Steps for Multi-Part Books (on Libby)</a>
-    </li>
-    </ul>
+                <li class="toctree-l3"><a class="reference internal" href="../using_libby_to_get_mp3/">Libby MP3s</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../using_libbyoverdrive_odmpy/">Overdrive ODM and odmpy</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../using_netflix_for_myo/">Netflix Audio for MYO</a>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">Netflix Audio for MYO</a>
+    <ul class="current">
+    </ul>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../using_spotify_for_myo/">Spotify for MYO</a>
                 </li>
@@ -237,7 +235,7 @@
           <li class="breadcrumb-item">Guides</li>
           <li class="breadcrumb-item">Myo</li>
           <li class="breadcrumb-item">Audio Content Sources</li>
-      <li class="breadcrumb-item active">Libby MP3s</li>
+      <li class="breadcrumb-item active">Netflix Audio for MYO</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -246,64 +244,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="libby-mp3s">Libby MP3s</h1>
-<p>Requirements:</p>
-<ul>
-<li>Chrome or a Chromium-based browser</li>
-</ul>
-<p><em>This method requires no additional setup (nothing to download or run), though is a bit more cumbersome for longer audiobooks.</em></p>
-<hr />
+                <h1 id="netflix-audio-for-myo">Netflix Audio for MYO</h1>
 <ol>
-<li>Open the Audiobook player in the Libby app (<a href="https://libbyapp.com/">https://libbyapp.com/</a>)</li>
-<li>
-<p>Right click, and click on Inspect</p>
-<p><img alt="uslibmp3_00.png" src="../../../../img/uslibmp3_00.png" /></p>
-</li>
-<li>
-<p>Click on Network</p>
-<p><img alt="uslibmp3_01.png" src="../../../../img/uslibmp3_01.png" /></p>
-</li>
-<li>
-<p>Click on Media</p>
-<p><img alt="uslibmp3_02.png" src="../../../../img/uslibmp3_02.png" /></p>
-</li>
-<li>
-<p>Refresh the page</p>
-<p><img alt="uslibmp3_03.png" src="../../../../img/uslibmp3_03.png" /></p>
-</li>
-<li>
-<p>Select the last media file and copy the Request URL:</p>
-<p><img alt="uslibmp3_04.png" src="../../../../img/uslibmp3_04.png" /></p>
-</li>
-<li>
-<p>Paste the URL in a new tab. This will open the mp3, which can then be downloaded.</p>
-<p><img alt="uslibmp3_05.png" src="../../../../img/uslibmp3_05.png" /></p>
-<p><img alt="uslibmp3_06.png" src="../../../../img/uslibmp3_06.png" /></p>
-</li>
+<li>Open <strong>Netflix</strong> in Web Browser    </li>
+<li>Press <code>F12</code> to open <code>Developer Tools</code></li>
+<li>Go to <code>Network</code>
+    <img alt="unafm_01.png" src="../../../../img/unafm_01.png" /></li>
+<li>Let the episode/movie play for a minute, you can stop the recording to make it easier to filter.
+    <img alt="unafm_10.png" src="../../../../img/unafm_10.png" /></li>
+<li>Filter results with this string: <code>?o=</code>
+    <img alt="unafm_02" src="../../../../img/unafm_02.png" /></li>
+<li>Sort by size (smallest to largest) by clicking on the size column
+    <img alt="unafm_03.png" src="../../../../img/unafm_03.png" /></li>
+<li>Guess and check, middle size files (about 100-150kB usually contain the audio, movies tend to be a bit larger)
+    <img alt="unafm_04.png" src="../../../../img/unafm_04.png" /></li>
+<li>Click on the line you want, copy the url
+    <img alt="unafm_05.png" src="../../../../img/unafm_05.png" /></li>
+<li>Paste the URL into a separate browser tab and delete the section from <code>range</code> until <code>?</code> 
+    <img alt="unafm_06.png" src="../../../../img/unafm_06.png" /></li>
+<li>AFTER REMOVING it should look like <code>net/?o=</code>
+    <img alt="unafm_07.png" src="../../../../img/unafm_07.png" /></li>
+<li>Press enter</li>
+<li>That will download an unencrypted aac file of bitrate between ~128kpbs - ~192kpbs. The file should be about 20-80mb, this is the size you should expect for audio of an episode/movie. (If the size is wrong, cancel download and repeat steps 7-11)
+    <img alt="unafm_08.png" src="../../../../img/unafm_08.png" /></li>
+<li>Rename and change file to <code>.mp4</code> extension
+    <img alt="unafm_09.png" src="../../../../img/unafm_09.png" /></li>
+<li>Open and verify it plays the audio</li>
+<li>Use <a href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a> to convert from <code>.mp4</code> to <code>.m4a</code>
+    <code>terminal
+    ffmpeg -c:a aac_at -i ~/Downloads/[filename].mp4 [filename].m4a</code>
+You may have to specify where your downloads folder is:
+    <code>terminal
+    ffmpeg -c:a aac_at -i /Users/[username]/Downloads/[filename].mp4 [filename].m4a</code></li>
 </ol>
-<hr />
-<p>If an audiobook has multiple parts (typically if it is longer than ~1.25 hours), then there are a few more steps to get the additional parts (see below). Or try the <a href="../using_libbyoverdrive_odmpy/">Overdrive method</a>.</p>
-<p>Also, a variation of this retrieval method can be used, but instead of inspecting the page yourself, you can use the Video Download Helper to acquire the mp3 (see the <a href="../using_video_download_helper_for_myo/">Video Download Helper guide</a> for more information). Please note if you use this method you cannot use Chrome.</p>
-<h2 id="additional-steps-for-multi-part-books-on-libby">Additional Steps for Multi-Part Books (on Libby)</h2>
-<ol>
-<li>
-<p>After downloading the first part, navigate to the each subsequent part of the book.</p>
-</li>
-<li>
-<p>Repeat steps 5-7 above for each subsequent part.</p>
-</li>
-</ol>
-<p><em>Tips to make this easier:</em></p>
-<ul>
-<li><em>Reference the last file downloaded for duration and use the Libby audioplayer Table of Contents to figure out where you need to jump for the next part.</em></li>
-<li><em>Start playing the file prior to downloading to make sure it is the correct part.</em></li>
-</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../aquiring_audio_tools/" class="btn btn-neutral float-left" title="Tools to Acquire Audio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../using_libbyoverdrive_odmpy/" class="btn btn-neutral float-right" title="Overdrive ODM and odmpy">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../using_libbyoverdrive_odmpy/" class="btn btn-neutral float-left" title="Overdrive ODM and odmpy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../using_spotify_for_myo/" class="btn btn-neutral float-right" title="Spotify for MYO">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -326,10 +305,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../aquiring_audio_tools/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../using_libbyoverdrive_odmpy/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../using_libbyoverdrive_odmpy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../using_spotify_for_myo/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
