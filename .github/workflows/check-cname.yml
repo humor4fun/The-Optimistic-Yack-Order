@@ -1,0 +1,36 @@
+name: Ensure CNAME File
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check-cname:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Check if CNAME file exists
+      id: check-cname
+      run: |
+        if [ ! -f CNAME ]; then
+          echo "CNAME file does not exist. Creating it..."
+          echo "yackorder.org" > CNAME
+          echo "created=true" >> $GITHUB_ENV
+        else
+          echo "CNAME file already exists."
+          echo "created=false" >> $GITHUB_ENV
+        fi
+
+    - name: Commit and push CNAME file
+      if: env.created == 'true'
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add CNAME
+        git commit -m "Add CNAME file with content 'yackorder.org'"
+        git push
